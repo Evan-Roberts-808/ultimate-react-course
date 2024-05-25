@@ -9,7 +9,14 @@ function footer() {
   return (
     <>
     {isOpen ? 
-    (<footer className='footer'>{new Date().toLocaleTimeString()} We're currently open</footer>) 
+    (
+      <footer className='footer'>
+      <div className='order'>
+        <p>{new Date().toLocaleTimeString()} We're currently open</p>
+        <button className='btn'>Order</button>
+      </div>
+      </footer>
+    ) 
     : 
     (<footer className='footer'>{new Date().toLocaleTimeString()} We're currently closed</footer>)
     }
