@@ -1,19 +1,16 @@
-import React from 'react'
+import React from "react";
 import { useState } from "react";
-import Search from './Search'
-import Logo from './Logo'
-import NumResults from './numResults';
+import Search from "./Search";
+import Logo from "./Logo";
+import NumResults from "./numResults";
 
-function Navbar({tempWatchedData, tempMovieData}) {
-
-
+function Navbar({ children }) {
   return (
     <nav className="nav-bar">
-        <Logo />
-        <Search />
-        <NumResults />
-      </nav>
-  )
+      <Logo />
+      {children}
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
